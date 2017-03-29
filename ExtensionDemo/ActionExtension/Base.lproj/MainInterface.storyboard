@@ -1,23 +1,28 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A2323a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Image-->
         <scene sceneID="7MM-of-jgj">
             <objects>
-                <viewController title="Image" id="ObA-dk-sSI" customClass="ActionViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController title="Image" id="ObA-dk-sSI" customClass="ActionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qkL-Od-lgU"/>
                         <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="Action" id="zMn-AG-sqS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="NOA-Dm-cuz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <navigationItem id="3HJ-uW-3hn">
                                         <barButtonItem key="leftBarButtonItem" title="Done" style="done" id="WYi-yp-eM6">
@@ -28,28 +33,62 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9ga-4F-77Z"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a7b-0J-zLA">
+                                <rect key="frame" x="0.0" y="44" width="320" height="484"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tpg-VC-vb8">
+                                <rect key="frame" x="8" y="64" width="304" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="3Tw-qx-0cJ"/>
+                                </constraints>
+                                <string key="text">Tap the action button to invoke activity view controller. Then select 'Read it' action and this text will be read by our sample Action extension.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVV-ow-lhw">
+                                <rect key="frame" x="0.0" y="334" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="R0x-i4-IpS"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="action" id="Izo-H7-Pdp">
+                                        <connections>
+                                            <action selector="actionButtonPressed:" destination="ObA-dk-sSI" id="bcW-Pr-J29"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="LVV-ow-lhw" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="51K-li-scM"/>
+                            <constraint firstItem="tpg-VC-vb8" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" constant="8" id="9Ap-jq-Lxg"/>
                             <constraint firstAttribute="trailing" secondItem="NOA-Dm-cuz" secondAttribute="trailing" id="A05-Pj-hrr"/>
-                            <constraint firstItem="9ga-4F-77Z" firstAttribute="top" secondItem="NOA-Dm-cuz" secondAttribute="bottom" id="Fps-3D-QQW"/>
+                            <constraint firstAttribute="trailing" secondItem="tpg-VC-vb8" secondAttribute="trailing" constant="8" id="C8l-b9-0Ct"/>
                             <constraint firstItem="NOA-Dm-cuz" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="HxO-8t-aoh"/>
-                            <constraint firstAttribute="trailing" secondItem="9ga-4F-77Z" secondAttribute="trailing" id="Ozw-Hg-0yh"/>
-                            <constraint firstItem="9ga-4F-77Z" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="XH5-ld-ONA"/>
-                            <constraint firstItem="n38-gi-rB5" firstAttribute="top" secondItem="9ga-4F-77Z" secondAttribute="bottom" id="eQg-nn-Zy4"/>
+                            <constraint firstItem="n38-gi-rB5" firstAttribute="top" secondItem="a7b-0J-zLA" secondAttribute="bottom" id="cIA-f0-wUX"/>
+                            <constraint firstAttribute="trailing" secondItem="a7b-0J-zLA" secondAttribute="trailing" id="h2V-aY-fTV"/>
+                            <constraint firstItem="LVV-ow-lhw" firstAttribute="top" secondItem="tpg-VC-vb8" secondAttribute="bottom" constant="30" id="mr9-Jy-Ib7"/>
+                            <constraint firstItem="a7b-0J-zLA" firstAttribute="top" secondItem="NOA-Dm-cuz" secondAttribute="bottom" id="rTf-qs-jWF"/>
+                            <constraint firstAttribute="trailing" secondItem="LVV-ow-lhw" secondAttribute="trailing" id="rqP-2G-sNZ"/>
+                            <constraint firstItem="tpg-VC-vb8" firstAttribute="top" secondItem="NOA-Dm-cuz" secondAttribute="bottom" constant="20" id="tlv-nf-pSR"/>
                             <constraint firstItem="NOA-Dm-cuz" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" id="we0-1t-bgp"/>
+                            <constraint firstItem="a7b-0J-zLA" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="xZt-8f-DIz"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="528"/>
                     <connections>
-                        <outlet property="imageView" destination="9ga-4F-77Z" id="5y6-5w-9QO"/>
+                        <outlet property="imageView" destination="a7b-0J-zLA" id="Jda-4U-jxB"/>
+                        <outlet property="textView" destination="tpg-VC-vb8" id="F9r-6L-ecg"/>
                         <outlet property="view" destination="zMn-AG-sqS" id="Qma-de-2ek"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="33.600000000000001" y="37.781109445277366"/>
         </scene>
     </scenes>
 </document>

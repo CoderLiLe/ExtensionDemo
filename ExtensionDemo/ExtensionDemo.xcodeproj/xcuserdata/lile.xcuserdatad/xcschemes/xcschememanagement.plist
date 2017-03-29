@@ -6,8 +6,15 @@
 	<dict>
 		<key>ActionExtension.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+		<key>ActionNoUserInterfaceExtension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>ExtensionDemo.xcscheme</key>
 		<dict>
@@ -16,6 +23,8 @@
 		</dict>
 		<key>TodayExtension.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
@@ -43,6 +52,16 @@
 			<true/>
 		</dict>
 		<key>240A5DDF1E896D0B00D5BBB2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>24391CE81E8BA5F4002759B1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>24391CFB1E8BA66F002759B1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
