@@ -4,7 +4,7 @@
 //
 //  Created by LiLe on 2017/3/29.
 //  Copyright © 2017年 LiLe. All rights reserved.
-//
+//  处理Host应用发送的请求和参数
 
 #import "ActionRequestHandler.h"
 #import <MobileCoreServices/MobileCoreServices.h>
